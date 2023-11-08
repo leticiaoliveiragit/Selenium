@@ -1,0 +1,139 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-17T21:05:07.553Z",
+    "end": "2023-10-17T21:05:13.358Z",
+    "duration": 5805,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "568b5ea6-2bbf-436e-aa61-bb762d511d8d",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2d880886-7835-42fd-82d7-9b43cfd95ace",
+          "title": "Adicionar tarefas",
+          "fullFile": "C:\\Users\\leticiaoliveira\\Desktop\\Selenium\\test\\secondTest.js",
+          "file": "\\test\\secondTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adicionou uma OUTRA tarefa com sucesso ao aplicativo",
+              "fullTitle": "Adicionar tarefas Adicionou uma OUTRA tarefa com sucesso ao aplicativo",
+              "timedOut": null,
+              "duration": 5356,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Abrir o navegador\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n\n//Navegar até o site\nawait driver.get(\"https://herziopinto.github.io/lista-de-tarefas/\");\n\n//10 itens na lista de tarefas\nawait driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium\", Key.RETURN);\nawait driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Cypress\", Key.RETURN);\n\n\n//Assertion  Selenium\nlet seleniumText = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[1]/label\")).getText().then(function(value){\n    return value\n});\nseleniumText.should.equal(\"Aprender Selenium\")\n\n\n//Assertion Cypress\nlet cypressText = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[2]/label\")).getText().then(function(value){\n    return value\n});\ncypressText.should.equal(\"Aprender Cypress\")\n\n//Fechar o navegador\nawait driver.quit();",
+              "err": {},
+              "uuid": "7e702c4d-d000-4297-a24c-34e7d49e6182",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7e702c4d-d000-4297-a24c-34e7d49e6182"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5356,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        },
+        {
+          "uuid": "fc5d5b63-7291-4c69-a0d6-aa8e56f3e86f",
+          "title": "Adicionar tarefas",
+          "fullFile": "C:\\Users\\leticiaoliveira\\Desktop\\Selenium\\test\\firstTest.js",
+          "file": "\\test\\firstTest.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Adicionou uma tarefa com sucesso à aplicação",
+              "fullTitle": "Adicionar tarefas Adicionou uma tarefa com sucesso à aplicação",
+              "timedOut": null,
+              "duration": 5368,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Abrir o navegador\nlet driver = await new Builder().forBrowser(\"firefox\").build();\n\n//Navegar até o site\nawait driver.get(\"https://herziopinto.github.io/lista-de-tarefas/\");\n\n//10 itens na lista de tarefas\nawait driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Selenium\", Key.RETURN);\nawait driver.findElement(By.id(\"inputTask\")).sendKeys(\"Aprender Cypress\", Key.RETURN);\n\n\n//Assertion  Selenium\nlet seleniumText = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[1]/label\")).getText().then(function(value){\n    return value\n});\nseleniumText.should.equal(\"Aprender Selenium\")\n\n\n//Assertion Cypress\nlet cypressText = await driver.findElement(By.xpath(\"/html/body/div/section/ul/li[2]/label\")).getText().then(function(value){\n    return value\n});\ncypressText.should.equal(\"Aprender Cypress\")\n\n//Fechar o navegador\nawait driver.quit();",
+              "err": {},
+              "uuid": "ef037608-11af-4cb9-a96b-9835fbb62887",
+              "parentUUID": null,
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ef037608-11af-4cb9-a96b-9835fbb62887"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5368,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": null
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
